@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.alexgl00.misaficiones.fr.sobremi.Favorito;
+import com.alexgl00.misaficiones.fr.sobremi.Favorito1;
 import com.alexgl00.misaficiones.fr.sobremi.Foto;
 import com.alexgl00.misaficiones.fr.sobremi.Indice;
 
@@ -28,8 +29,10 @@ public class PaginadorSobreMi extends FragmentPagerAdapter {
                 return new Indice();
             case 1:
                 return new Foto();
-            //case 2:
-                //return new Favorito();
+            case 2:
+                return new Favorito();
+            case 3:
+                return new Favorito1();
             default:
                 return null;
         }
@@ -37,6 +40,6 @@ public class PaginadorSobreMi extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 4;
     }
 }
